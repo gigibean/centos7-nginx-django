@@ -307,7 +307,7 @@ Start command: `sudo nginx -s reload && uwsgi --ini /etc/uwsgi/uwsgi_emperor.ini
 
 Stop command: `sudo nginx -s stop && uwsgi --stop /tmp/emperor.pid`
 
-###General(Default) mode
+### General(Default) mode
 
 ```
 $ cd /home/user_name/main_project/dir2/

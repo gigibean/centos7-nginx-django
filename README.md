@@ -383,3 +383,5 @@ $ systemctl restart nginx
 $ uwsgi --ini /etc/uwsgi/uwsgi_emperor.ini
 $ sudo tail -30 /var/log/uwsgi/emperor.ini
 ```
+
+<script src="https://gist.github.com/gigibean/4ab9ad77a7eb337de890cf3318173783.js"></script>

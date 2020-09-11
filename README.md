@@ -280,7 +280,7 @@ This is Emperor mode
 
 If you need to deploy a big number of apps on a single server, or a group of servers, the Emperor mode is just the ticket.
 
-Start command: sudo uwsgi --emperor /etc/wusgi/vassals --uid user_name gid group_name
+Start command: `sudo uwsgi --emperor /etc/wusgi/vassals --uid user_name gid group_name`
 
 If you have emperor_wusgi.ini file,
 

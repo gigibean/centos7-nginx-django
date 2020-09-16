@@ -275,7 +275,7 @@ socket = %(base)/dir2/uwsgi.sock
 chmod-socket = 666
 vacuum = True
 pidfile = /tmp/emperor.pid
-deamonize = /home/%(uid)/main_dir/dir2/emperor.log
+deamonize = /var/log/uwsgi/sample.log
 ```
 
 ```

@@ -61,7 +61,7 @@ $ sudo yum clean all
 
 ```
 $ yum search MariaDB
-$ yum install -y mariadb mariadb-server mariadb-devel
+$ yum install -y mariadb-server
 >Installed:
   MariaDB-client.x86_64 0:10.5.5-1.el7.centos    MariaDB-compat.x86_64 0:10.5.5-1.el7.centos    MariaDB-devel.x86_
 64 0:10.5.5-1.el7.centos    MariaDB-server.x86_64 0:10.5.5-1.el7.centos
@@ -112,6 +112,7 @@ $ yum install python3-devel.x86_64
 # Remove MariaDB-devel which is installed when we install MariaDB-server
 $ yum list installed | grep mariadb
 $ sudo yum erase MariaDB-devel.x84_64
+# If you didn't install 'MariaDB-devel' you don't have to earse this.
 
 # Add MySQL repository in yum
 # Go to https://dev.mysql.com/downloads/repo/yum/ and select the RPM file for your CentOS 

@@ -158,7 +158,7 @@ $ systemctl start nginx
 $ groupadd group_name
 $ grep group_name /etc/group
 $ useradd -g group_name -s /sbin/nologin -p 'password' user_name
-$ echo 'password' | passwd --stdln user_name
+$ echo 'password' | passwd --stdin user_name
 $ cat /etc/passwd
 ```
 
@@ -206,13 +206,13 @@ $ python3.6 manage.py createsuperuser
 
 ```
 $ sudo -H pip3 install wheel
-$ sudo -H pip3 isntall uwsgi
+$ sudo -H pip3 install uwsgi
 ```
 
 ## 7. Install & Set nginx
 
 ```
-$ cd /etc/nginx/conf.d/nginx.conf
+$ cd /etc/nginx/conf.d/
 $ mv default.conf default.conf.ogirinal
 $ find / -name uwsgi_params
 $ cp /etc/nginx/uwsgi_params /home/user_name/main_dir/dir1/project_dir/uwsgi_params
@@ -277,6 +277,14 @@ vacuum = True
 pidfile = /tmp/emperor.pid
 deamonize = /home/%(uid)/main_dir/dir2/emperor.log
 ```
+
+```
+```
+$ mkdir /var/log/uwsgi/
+$ sudo touch /var/log/uwsgi/sample.log
+$ sudo chmod 666 /var/log/uwsgi/sample.log
+```
+
 This is Emperor mode
 
 If you need to deploy a big number of apps on a single server, or a group of servers, the Emperor mode is just the ticket.
@@ -304,6 +312,13 @@ pidfile = /tmp/emperor.pid
 vacuum = Ture
 daemonize = /var/log/uwsgi/emperor.log
 ```
+
+
+```
+sudo touch /var/log/uwsgi/emperor.ini
+sudo chmod 666 /var/log/uwsgi/emperor.ini
+```
+
 Start command: `sudo nginx -s reload && uwsgi --ini /etc/uwsgi/uwsgi_emperor.ini`
 
 Stop command: `sudo nginx -s stop && uwsgi --stop /tmp/emperor.pid`
@@ -338,6 +353,10 @@ deamonize = /home/user_dir/main_dir/dir2/sample.log
 ;Start or Stop commands are supposed to be executed in project directory
 ;Start command: uwsgi --ini dir2/uwsgi.ini
 ;Stop command: uwsgi --stop /tmp/sample_master.pid
+```
+```
+sudo touch /home/user_dir/main_dir/dir2/sample.log
+sudo chmod 666 /home/user_dir/main_dir/dir2/sample.log
 ```
 
 ## 9. Set sftp

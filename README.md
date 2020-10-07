@@ -278,7 +278,7 @@ pidfile = /tmp/emperor.pid
 deamonize = /var/log/uwsgi/sample.log
 ```
 
-```
+
 ```
 $ mkdir /var/log/uwsgi/
 $ sudo touch /var/log/uwsgi/sample.log
